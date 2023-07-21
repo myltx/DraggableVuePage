@@ -6,6 +6,7 @@ import Markdown from 'vite-plugin-doc-preview'
 import creatFileJson from './vite-plugin-creatFileJson'
 import { resolve } from 'path'
 import fs from 'fs'
+import UnoCSS from 'unocss/vite'
 
 // 将public下的iconfont.css复制到。直接从public目录导入会报错Assets in public cannot be imported from JavaScript
 fs.createReadStream('./public/static/iconfont/iconfont.json').pipe(
@@ -19,6 +20,7 @@ export default defineConfig({
     vue({
       include: [/\.vue$/, /\.md$/]
     }),
+    UnoCSS(),
     vueJsx({}),
     Markdown(),
     Pages({

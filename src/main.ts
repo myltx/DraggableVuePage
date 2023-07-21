@@ -10,6 +10,9 @@ import './assets/scss/element-var.scss'
 import '@/assets/scss/index.scss'
 import AKDesign from './views/design/index'
 import ComComponents from '@/components/index'
+// unocss
+import 'virtual:uno.css'
+import '@unocss/reset/tailwind.css'
 // 实例化 Pinia
 const pinia = createPinia()
 const app = createApp(App)

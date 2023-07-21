@@ -1,7 +1,7 @@
 <!-- Created by 337547038  -->
 <template>
   <div class="bg-none design-index">
-    <h2>开始创建一个页面</h2>
+    <h2 class="">开始创建一个页面</h2>
     <el-button type="primary" link @click="$router.push({ path: '/docs' })"
       >如何使用？</el-button
     >
