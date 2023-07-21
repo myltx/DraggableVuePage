@@ -7,7 +7,7 @@
     >
       <div class="logo" @click="$router.push({ path: '/' })"
       ><img src="@/assets/logo.png" alt="" />
-        <span v-show="!isCollapse">AK低代码快速开发平台</span></div
+             <span v-show="!isCollapse">DR低代码快速开发平台</span></div
       >
       <Menu :collapse="isCollapse" @get-menu-list="getMenuList" />
     </el-aside>
