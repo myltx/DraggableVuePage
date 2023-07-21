@@ -1,49 +1,65 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "esnext",
     "useDefineForClassFields": true,
-    "module": "ESNext",
-    "lib": [
-      "ES2020",
-      "DOM",
-      "DOM.Iterable"
-    ],
-    "skipLibCheck": true,
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "noLib": false,
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+    "strictFunctionTypes": false,
+    "jsx": "preserve",
+    "allowJs": true,
+    "sourceMap": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "preserve",
-    "sourceMap": true,
-    "types": [],
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
+    "esModuleInterop": true,
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "baseUrl": ".",
+    "types": [
+      "node",
+      "vite/client",
+      "element-plus/global",
+      "unplugin-element-plus",
+      "unplugin-element-plus/vite"
+    ],
+    "removeComments": true,
     "paths": {
       "@/*": [
-        "./src/*"
+        "src/*"
+      ],
+      "api/*": [
+        "src/api/*"
       ]
-      // 这里需要配置
     }
   },
   "include": [
+    "tests/**/*.ts",
     "src/**/*.ts",
+    "src/**/**/*.ts",
     "src/**/*.d.ts",
     "src/**/*.tsx",
-    "src/**/*.vue"
-  ],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    }
+    "src/**/*.vue",
+    "types/**/*.d.ts",
+    "types/**/*.ts",
+    "build/**/*.ts",
+    "build/**/*.d.ts",
+    "mock/**/*.ts",
+    "vite.config.ts",
+    "types/env.d.ts",
+    "types/*.d.ts",
+    "config/**/*.ts",
+    "config/**/*.d.ts",
   ],
   "exclude": [
     "node_modules",
+    "tests/server/**/*.ts",
     "dist",
-    "docs"
+    "**/*.js",
+    "public",
   ]
 }
