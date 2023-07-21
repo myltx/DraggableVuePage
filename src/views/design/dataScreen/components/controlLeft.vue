@@ -111,7 +111,8 @@
     background: ['背景', 'image'],
     border: ['边框', 'border'],
     clock: ['当前时间', 'time'],
-    component: ['自定义', 'component']
+    component: ['自定义', 'component'],
+    component1: ['自定义', 'component']
   }
   const layerList = ref([])
   const controlList = ref([
@@ -306,6 +307,16 @@
           type: 'component',
           label: dict.component[0],
           icon: dict.component[1],
+          position: {
+            width: 200,
+            height: 200
+          },
+          config: {}
+        },
+        {
+          type: 'component1',
+          label: dict.component1[0],
+          icon: dict.component1[1],
           position: {
             width: 200,
             height: 200

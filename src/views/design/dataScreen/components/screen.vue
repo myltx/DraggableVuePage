@@ -74,7 +74,7 @@
       :config="config"
     />
     <component
-      v-if="['component'].includes(data.type)"
+      v-if="['component', 'component1'].includes(data.type)"
       :is="config.component"
       v-bind="config"
     />
@@ -105,7 +105,8 @@
   import formatScreen from '@/utils/formatScreen'
   import { ElMessage } from 'element-plus'
   import { debounce } from '@/utils'
-  import { canControlRect } from '../utils.ts'
+  import { canControlRect } from '../utils'
+  import Test from '@/views/test.vue'
 
   const props = withDefaults(
     defineProps<{
@@ -133,6 +134,8 @@
   })
   const newValue = ref()
   const config = computed(() => {
+    console.log(props.data.config, 'props.data.config');
+    props.data.config.component = Test
     return props.data.config || {}
   })
   const isNumber = (val: any) => {
