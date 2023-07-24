@@ -24,8 +24,8 @@
       "node",
       "vite/client",
       "element-plus/global",
-      "unplugin-element-plus",
-      "unplugin-element-plus/vite"
+      // "unplugin-element-plus",
+      // "unplugin-element-plus/vite"
     ],
     "removeComments": true,
     "paths": {
